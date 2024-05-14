@@ -1,12 +1,11 @@
 import { useState } from 'react'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
       <div>
-        <p className="read-the-docs">
+        <p>
           myApp
         </p>
       </div>
