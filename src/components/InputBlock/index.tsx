@@ -2,12 +2,13 @@ import { ChangeEvent } from "react";
 
 type InputProps = {
   input: string;
-  setInput: (newInput: string)=> void
+  setInput: (newInput: string) => void
   inputType: string
-  BlockLabel: string
+  blockLabel: string
+  placeholderText: string
 }
 
-export function InputBlock({input,setInput, inputType}:InputProps){
+export function InputBlock({ input, setInput, inputType, blockLabel, placeholderText }: InputProps) {
 
   const handlePasswordChange = (e: ChangeEvent<HTMLInputElement>) => {
     const newInput = e.target.value;
@@ -15,11 +16,14 @@ export function InputBlock({input,setInput, inputType}:InputProps){
   };
 
   return (
-    <input
-      type= {inputType}
-      value={input}
-      onChange={handlePasswordChange}
-      placeholder="Enter your password"
-    />
+    <>
+      <p>{blockLabel}</p>
+      <input
+        type={inputType}
+        value={input}
+        onChange={handlePasswordChange}
+        placeholder={placeholderText}
+      />
+    </>
   );
 };
