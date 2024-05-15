@@ -1,5 +1,5 @@
 import { ChangeEvent } from "react";
-import { Container } from "./styles";
+import { Container, StyledInput, StyledLabel } from "./styles";
 
 type InputProps = {
   input: string;
@@ -18,8 +18,10 @@ export function InputBlock({ input, setInput, inputType, blockLabel, placeholder
 
   return (
     <Container>
-      <p>{blockLabel}</p>
-      <input
+      <StyledLabel>
+        {blockLabel}
+      </StyledLabel>
+      <StyledInput
         type={inputType}
         value={input}
         onChange={handlePasswordChange}
