@@ -22,6 +22,6 @@ align-items: center;
 `;
 
 export const HeaderImage = styled.img`
-width: 310px;
+width: 300px;
 height: auto;
 `;
