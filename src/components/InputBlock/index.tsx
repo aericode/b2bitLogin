@@ -1,4 +1,5 @@
 import { ChangeEvent } from "react";
+import { Container } from "./styles";
 
 type InputProps = {
   input: string;
@@ -16,7 +17,7 @@ export function InputBlock({ input, setInput, inputType, blockLabel, placeholder
   };
 
   return (
-    <>
+    <Container>
       <p>{blockLabel}</p>
       <input
         type={inputType}
@@ -24,6 +25,6 @@ export function InputBlock({ input, setInput, inputType, blockLabel, placeholder
         onChange={handlePasswordChange}
         placeholder={placeholderText}
       />
-    </>
+    </Container>
   );
 };
