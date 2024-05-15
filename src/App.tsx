@@ -16,13 +16,13 @@ function App() {
 
 
   const LoginCard = styled.div`
-  background-color: ${({ theme }) => theme.COLORS.WHITE};
-  width: 438px;
-  height: 200px;
-  padding: 55px 26px;
-  border-radius: 18px;
-  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.4);
-`;
+    background-color: ${({ theme }) => theme.COLORS.WHITE};
+    width: 438px;
+    height: 200px;
+    padding: 55px 26px;
+    border-radius: 18px;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.4);
+  `;
 
 
   return (
