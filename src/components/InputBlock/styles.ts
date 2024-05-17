@@ -9,7 +9,7 @@ width: 100%;
 export const StyledLabel = styled.p`
 font-size: ${({ theme }) => theme.FONT_SIZE.LG};
 font-weight: ${({ theme }) => theme.FONT_WEIGHT.BOLD};
-margin-bottom: 5px;
+margin-bottom: 8px;
 `
 
 export const StyledInput = styled.input`

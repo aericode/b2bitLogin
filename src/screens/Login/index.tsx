@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import logo from '../../assets/logo.png'
+import logo from '../../assets/B2Bit_logo.png'
 import { Container, HeaderImage, LoginCard, Wrapper } from './styles'
 import { InputBlock } from '../../components/InputBlock';
 import { Button } from '../../components/Button';
@@ -20,15 +20,15 @@ export function Login() {
             setInput={setEmailInput}
             blockLabel='E-mail'
             inputType='email'
-            placeholderText='seu@email.com'
+            placeholderText='your@email.com'
           />
 
           <InputBlock
             input={passwordInput}
             setInput={setPasswordInput}
-            blockLabel='Senha'
+            blockLabel='Password'
             inputType='password'
-            placeholderText='sua senha'
+            placeholderText='your password'
           />
 
           <Button
