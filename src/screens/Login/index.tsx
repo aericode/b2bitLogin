@@ -4,6 +4,8 @@ import { Container, HeaderImage, LoginCard, Wrapper } from './styles'
 import { InputBlock } from '../../components/InputBlock';
 import { Button } from '../../components/Button';
 import { sendLoginRequest } from '../../utils/sendLoginRequest';
+import { UserData } from '../../Types/UserData';
+import { TokenData } from '../../Types/TokenData';
 
 
 
@@ -15,15 +17,16 @@ export function Login() {
   const handleSubmit = async() => {
     try{
       const requestResponse = await sendLoginRequest(emailInput, passwordInput)
-      const userData  = requestResponse.user;
-      const tokenData =  requestResponse.tokens;
+      const userData  :UserData  = requestResponse.user;
+      const tokenData :TokenData = requestResponse.tokens;
 
-      handleLoginSuccess();
+      handleLoginSuccess(userData, tokenData);
     }catch (error) {
       handleLoginFailure();
     }
   }
-  function handleLoginSuccess(){
+
+  function handleLoginSuccess(userData  :UserData, tokenData :TokenData){
 
   }
 
