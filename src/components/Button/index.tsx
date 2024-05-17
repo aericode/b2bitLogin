@@ -1,9 +1,8 @@
-import { MouseEvent } from 'react';
 import { StyledButton } from "./styles";
 
 interface ButtonProps {
   text: string;
-  onClick: (event: MouseEvent<HTMLButtonElement>) => void;
+  onClick: () => Promise<void>;
 }
 
 export function Button({text, onClick}: ButtonProps){
