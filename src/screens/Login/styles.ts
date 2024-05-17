@@ -11,8 +11,8 @@ justify-content: center;
 export const LoginCard = styled.div`
 background-color: ${({ theme }) => theme.COLORS.WHITE};
 width: 440px;
-height: 280px;
-padding: 55px 26px;
+height: 340px;
+padding: 40px 26px;
 border-radius: 18px;
 box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.4);
 
@@ -34,5 +34,5 @@ width: 90%;
 export const HeaderImage = styled.img`
 width: 300px;
 height: auto;
-margin-bottom: 30px;
+margin-bottom: 20px;
 `;

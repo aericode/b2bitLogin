@@ -1,7 +1,7 @@
 export const theme = {
   COLORS:{
     //Primary
-    BLUE: "#02274F",
+    BLUE_B2: "#02274F",
     YELLOW: "#FDCF00",
 
     //Secondary

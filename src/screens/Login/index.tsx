@@ -2,6 +2,7 @@ import { useState } from 'react'
 import logo from '../../assets/logo.png'
 import { Container, HeaderImage, LoginCard, Wrapper } from './styles'
 import { InputBlock } from '../../components/InputBlock';
+import { Button } from '../../components/Button';
 
 
 export function Login() {
@@ -28,6 +29,11 @@ export function Login() {
             blockLabel='Senha'
             inputType='password'
             placeholderText='sua senha'
+          />
+
+          <Button
+            onClick={()=>{}}
+            text='Sign In'
           />
         </Wrapper>
       </LoginCard>
