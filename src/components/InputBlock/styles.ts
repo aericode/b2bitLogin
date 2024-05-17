@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
 display: flex;
 flex-direction: column;
-width: 90%;
+width: 100%;
 `
 
 export const StyledLabel = styled.p`
@@ -13,9 +13,11 @@ margin-bottom: 5px;
 `
 
 export const StyledInput = styled.input`
-  background-color: ${({ theme }) => theme.COLORS.WHITE_3};
   font-size: ${({ theme }) => theme.FONT_SIZE.MD};
   height: 35px;
   border-radius: 9px;
   padding: 2px 10px;
+
+  background-color: ${({ theme }) => theme.COLORS.WHITE_3};
+  border: 1px solid ${({ theme }) => theme.COLORS.GRAY_6};
 `;

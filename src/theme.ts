@@ -5,12 +5,14 @@ export const theme = {
     YELLOW: "#FDCF00",
 
     //Secondary
+    BLACK: "#000",
     BLACK_2: "#262626",
 
     WHITE: "#FFFFFF",
     WHITE_1: "#FAFAFA",
     WHITE_3: "#F1F1F1",
-
+    
+    GRAY_3: "#DEDEDE",
     GRAY_6: "#999999"
 
   },

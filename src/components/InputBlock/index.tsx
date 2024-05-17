@@ -11,7 +11,7 @@ type InputProps = {
 
 export function InputBlock({ input, setInput, inputType, blockLabel, placeholderText }: InputProps) {
 
-  const handlePasswordChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     const newInput = e.target.value;
     setInput(newInput);
   };
@@ -24,7 +24,7 @@ export function InputBlock({ input, setInput, inputType, blockLabel, placeholder
       <StyledInput
         type={inputType}
         value={input}
-        onChange={handlePasswordChange}
+        onChange={handleInputChange}
         placeholder={placeholderText}
       />
     </Container>

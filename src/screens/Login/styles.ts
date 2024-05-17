@@ -17,9 +17,18 @@ border-radius: 18px;
 box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.4);
 
 display: flex;
+align-items: center;
+justify-content: center;
+
+`;
+
+export const Wrapper = styled.div`
+display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: space-between;
+height: 100%;
+width: 90%;
 `;
 
 export const HeaderImage = styled.img`
