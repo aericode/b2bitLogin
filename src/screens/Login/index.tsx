@@ -17,8 +17,10 @@ export function Login() {
       const requestResponse = await sendLoginRequest(emailInput, passwordInput)
       const userData  = requestResponse.user;
       const tokenData =  requestResponse.tokens;
+
+      handleLoginSuccess();
     }catch (error) {
-      console.log("couldn't login")
+      handleLoginFailure();
     }
   }
   function handleLoginSuccess(){
