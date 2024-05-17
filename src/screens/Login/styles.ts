@@ -11,7 +11,7 @@ justify-content: center;
 export const LoginCard = styled.div`
 background-color: ${({ theme }) => theme.COLORS.WHITE};
 width: 380px;
-height: 380px;
+height: 420px;
 padding: 40px 26px;
 border-radius: 18px;
 box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.4);
@@ -27,12 +27,12 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: space-between;
-height:350px;
+height:380px;
 width: 90%;
 `;
 
 export const HeaderImage = styled.img`
-width: 280px;
+width: 300px;
 height: auto;
 margin-bottom: 20px;
 `;
