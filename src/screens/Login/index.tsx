@@ -3,7 +3,7 @@ import logo from '../../assets/B2Bit_logo.png'
 import { Container, HeaderImage, LoginCard, Wrapper } from './styles'
 import { InputBlock } from '../../components/InputBlock';
 import { Button } from '../../components/Button';
-import { handleSubmit } from '../../utils/handleSubmit';
+import { sendLoginRequest } from '../../utils/sendLoginRequest';
 
 
 
@@ -12,6 +12,23 @@ export function Login() {
   const [passwordInput, setPasswordInput] = useState('');
 
   
+  const handleSubmit = async() => {
+    try{
+      const requestResponse = await sendLoginRequest(emailInput, passwordInput)
+      const userData  = requestResponse.user;
+      const tokenData =  requestResponse.tokens;
+    }catch (error) {
+      console.log("couldn't login")
+    }
+  }
+  function handleLoginSuccess(){
+
+  }
+
+  function handleLoginFailure(){
+
+  }
+
 
   return (
     <Container>
@@ -36,7 +53,7 @@ export function Login() {
           />
 
           <Button
-            onClick={() => handleSubmit(emailInput, passwordInput)}
+            onClick={() => handleSubmit()}
             text='Sign In'
           />
         </Wrapper>
