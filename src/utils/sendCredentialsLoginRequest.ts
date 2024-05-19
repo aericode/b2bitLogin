@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const sendLoginRequest = async (emailInput: string, passwordInput: string) => {
+export const sendCredentialsLoginRequest = async (emailInput: string, passwordInput: string) => {
   
   try {
     const payload = {
@@ -18,7 +18,6 @@ export const sendLoginRequest = async (emailInput: string, passwordInput: string
       }
     );
 
-    console.log(response.data)
     return response.data;
   } catch (error) {
     if(error instanceof Error)throw error;

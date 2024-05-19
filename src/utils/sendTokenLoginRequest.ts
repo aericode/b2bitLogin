@@ -1,22 +1,21 @@
 import axios from "axios";
 
-export const sendLoginRequest = async (emailInput: string, passwordInput: string) => {
+export const sendTokenLoginRequest = async () => {
   const accessToken = localStorage.getItem('accessToken');
 
   try {
-    const response = await axios.post(
-      'https://api.homologation.cliqdrive.com.br/auth/login/'
+    const response = await axios.get(
+      'https://api.homologation.cliqdrive.com.br/auth/profile/'
       ,
       {
         headers: {
-          'Authorization' : accessToken,
+          'Authorization' : `Bearer ${accessToken}`,
           'Accept': 'application/json;version=v1_web',
           'Content-Type': 'application/json',
         },
       }
     );
 
-    console.log(response.data)
     return response.data;
   } catch (error) {
     if(error instanceof Error)throw error;

@@ -3,7 +3,7 @@ import logo from '../../assets/B2Bit_logo.png'
 import { Container, HeaderImage, LoginCard, Wrapper } from './styles'
 import { InputBlock } from '../../components/InputBlock';
 import { Button } from '../../components/Button';
-import { sendLoginRequest } from '../../utils/sendLoginRequest';
+import { sendCredentialsLoginRequest } from '../../utils/sendCredentialsLoginRequest';
 import { UserData } from '../../Types/UserData';
 import { TokenData } from '../../Types/TokenData';
 import { UserContext } from '../../contexts/UserContext';
@@ -20,7 +20,7 @@ export function Login() {
   
   const handleSubmit = async() => {
     try{
-      const requestResponse = await sendLoginRequest(emailInput, passwordInput)
+      const requestResponse = await sendCredentialsLoginRequest(emailInput, passwordInput)
       const fetchedUserData  :UserData  = requestResponse.user;
       const fetchedTokenData :TokenData = requestResponse.tokens;
 
@@ -31,8 +31,9 @@ export function Login() {
   }
 
   function handleLoginSuccess(fetchedUserData  :UserData, fetchedTokenData :TokenData){
-    setUserData(fetchedUserData)
+    setUserData!(fetchedUserData)
     localStorage.setItem('accessToken', fetchedTokenData.access);
+    localStorage.setItem('isLoggedIn', 'true');
     navigate('/user');
 
   }

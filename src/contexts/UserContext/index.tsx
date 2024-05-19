@@ -2,8 +2,8 @@ import { createContext, useState, ReactNode } from 'react';
 import { UserData } from '../../Types/UserData';
 
 interface UserContextProps {
-  userData: UserData;
-  setUserData: React.Dispatch<React.SetStateAction<UserData>>;
+  userData?: UserData;
+  setUserData?: React.Dispatch<React.SetStateAction<UserData | undefined>>;
 }
 
 type UserProviderType = {
@@ -13,7 +13,7 @@ type UserProviderType = {
 export const UserContext = createContext<UserContextProps>({} as UserContextProps);
 
 export const UserProvider: React.FC<UserProviderType> = ({ children }) => {
-  const [userData, setUserData] = useState<UserData>({} as UserData);
+  const [userData, setUserData] = useState<UserData>();
 
 
   const contextValue: UserContextProps = {
