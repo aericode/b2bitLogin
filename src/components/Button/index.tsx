@@ -2,7 +2,7 @@ import { StyledButton } from "./styles";
 
 interface ButtonProps {
   text: string;
-  onClick: () => Promise<void>;
+  onClick: (() => Promise<void>) | (() => void);
 }
 
 export function Button({text, onClick}: ButtonProps){

@@ -1,11 +1,11 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import { UserContext } from "../../contexts/UserContext";
 
-import { Container, LoginCard, Wrapper } from "../Login/styles";
 import { InfoDisplayBlock } from "../../components/InfoDisplayBlock";
 import { sendTokenLoginRequest } from "../../utils/sendTokenLoginRequest";
-import { useNavigate } from "react-router-dom";
 import { UserData } from "../../Types/UserData";
+import { Container, ProfileHeaderText, ProfileImage, ProfilePictureBlock, UserCard, Wrapper } from "./styles";
+import { Header } from "../../components/Header";
 
 export function UserScreen() {
   const { userData, setUserData } = useContext(UserContext);
@@ -33,11 +33,15 @@ export function UserScreen() {
 
   return (
     <Container>
-      <LoginCard>
+        <Header />
+      <UserCard>
         <Wrapper>
           {userData &&
             <>
-              <img src={userData.avatar.low} alt="Profile picture" />
+              <ProfilePictureBlock>
+                <ProfileHeaderText> Profile Picture </ProfileHeaderText>
+                <ProfileImage src={userData.avatar.low}/>
+              </ProfilePictureBlock>
 
               < InfoDisplayBlock
                 displayText={userData.name}
@@ -51,7 +55,7 @@ export function UserScreen() {
             </>
           }
         </Wrapper>
-      </LoginCard>
+      </UserCard>
     </Container>
   )
 }

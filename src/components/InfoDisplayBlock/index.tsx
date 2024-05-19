@@ -20,6 +20,7 @@ export function InfoDisplayBlock({ displayText, blockLabel }: InfoDisplayBlockPr
       </LabelBlock>
       <StyledInput
         value={displayText}
+        contentEditable={false}
         readOnly
       />
     </Container>
