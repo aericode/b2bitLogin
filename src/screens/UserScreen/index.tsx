@@ -26,7 +26,6 @@ export function UserScreen() {
 
 
     if (isLoggedIn === 'true' && !userData) {
-      console.log('refetching')
       fetchData();
     }
   }, []);
