@@ -4,7 +4,7 @@ import { UserContext } from "../../contexts/UserContext";
 import { InfoDisplayBlock } from "../../components/InfoDisplayBlock";
 import { sendTokenLoginRequest } from "../../utils/sendTokenLoginRequest";
 import { UserData } from "../../Types/UserData";
-import { Container, ProfileHeaderText, ProfileImage, ProfilePictureBlock, UserCard, Wrapper } from "./styles";
+import { Container, ProfileHeaderText, ProfilePicture, ProfilePictureBlock, ProfilePictureWrapper, UserCard, Wrapper } from "./styles";
 import { Header } from "../../components/Header";
 
 export function UserScreen() {
@@ -33,14 +33,16 @@ export function UserScreen() {
 
   return (
     <Container>
-        <Header />
+      <Header />
       <UserCard>
         <Wrapper>
           {userData &&
             <>
               <ProfilePictureBlock>
                 <ProfileHeaderText> Profile Picture </ProfileHeaderText>
-                <ProfileImage src={userData.avatar.low}/>
+                <ProfilePictureWrapper>
+                  <ProfilePicture src={userData.avatar.low} />
+                </ProfilePictureWrapper>
               </ProfilePictureBlock>
 
               < InfoDisplayBlock

@@ -45,9 +45,20 @@ font-weight: ${({ theme }) => theme.FONT_WEIGHT.SEMIBOLD};
 margin-bottom: 8px;
 `;
 
-export const ProfileImage = styled.img`
-width: 80px;
+export const ProfilePictureWrapper = styled.div`
+  height: 80px;
+  width: 80px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  white-space: nowrap;
+`;
+
+export const ProfilePicture = styled.img`
 height: 80px;
-margin-bottom: 20px;
-border-radius: 8px;
+width: auto;
+
 `;
