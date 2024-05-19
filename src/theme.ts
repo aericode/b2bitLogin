@@ -10,7 +10,9 @@ export const theme = {
 
     WHITE: "#FFFFFF",
     WHITE_1: "#FAFAFA",
+    WHITE_2: "#F4F4F4",
     WHITE_3: "#F1F1F1",
+    WHITE_6: "#F1F5F9",
     
     GRAY_3: "#DEDEDE",
     GRAY_6: "#999999"

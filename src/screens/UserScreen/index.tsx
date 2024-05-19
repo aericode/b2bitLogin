@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { UserContext } from "../../contexts/UserContext";
 
 import { Container, LoginCard, Wrapper } from "../Login/styles";
+import { InfoDisplayBlock } from "../../components/InfoDisplayBlock";
 
 export function UserScreen() {
   const { userData, setUserData } = useContext(UserContext);
@@ -12,9 +13,17 @@ export function UserScreen() {
     <Container>
       <LoginCard>
         <Wrapper>
-          <img src={userData.avatar.low} alt="Your Image" />
-          <p>{userData.name}</p>
-          <p>{userData.email}</p>
+          <img src={userData.avatar.low} alt="Profile picture" />
+          <InfoDisplayBlock
+            displayText={userData.name}
+            blockLabel="Name"
+          />
+
+          <InfoDisplayBlock
+            displayText={userData.email}
+            blockLabel="E-mail"
+          />
+
         </Wrapper>
       </LoginCard>
     </Container>
