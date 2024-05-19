@@ -8,14 +8,15 @@ import { UserData } from '../../Types/UserData';
 import { TokenData } from '../../Types/TokenData';
 import { UserContext } from '../../contexts/UserContext';
 
-
+import { useNavigate } from 'react-router-dom';
 
 export function Login() {
   const [emailInput, setEmailInput] = useState('');
   const [passwordInput, setPasswordInput] = useState('');
 
-  const { userData, setUserData } = useContext(UserContext);
+  const { setUserData } = useContext(UserContext);
 
+  const navigate = useNavigate();
   
   const handleSubmit = async() => {
     try{
@@ -30,8 +31,9 @@ export function Login() {
   }
 
   function handleLoginSuccess(fetchedUserData  :UserData, fetchedTokenData :TokenData){
-    setUserData!(fetchedUserData)
-    localStorage.setItem('jwtToken', fetchedTokenData.access);
+    setUserData(fetchedUserData)
+    localStorage.setItem('accessToken', fetchedTokenData.access);
+    navigate('/user');
 
   }
 
