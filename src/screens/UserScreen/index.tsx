@@ -13,7 +13,7 @@ export function UserScreen() {
     <Container>
       <LoginCard>
         <Wrapper>
-          <img src={userData.avatar.low} alt="Profile picture" />
+          {userData.avatar && <img src={userData.avatar.low} alt="Profile picture" />}
           <InfoDisplayBlock
             displayText={userData.name}
             blockLabel="Name"
