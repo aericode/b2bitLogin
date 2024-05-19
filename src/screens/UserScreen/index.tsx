@@ -12,8 +12,9 @@ export function UserScreen() {
     <Container>
       <LoginCard>
         <Wrapper>
-          <p>{userData.email}</p>
+          <img src={userData.avatar.low} alt="Your Image" />
           <p>{userData.name}</p>
+          <p>{userData.email}</p>
         </Wrapper>
       </LoginCard>
     </Container>
