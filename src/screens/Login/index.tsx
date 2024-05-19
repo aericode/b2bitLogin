@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import logo from '../../assets/B2Bit_logo.png'
 import { Container, HeaderImage, LoginCard, Wrapper } from './styles'
 import { InputBlock } from '../../components/InputBlock';
@@ -6,6 +6,7 @@ import { Button } from '../../components/Button';
 import { sendLoginRequest } from '../../utils/sendLoginRequest';
 import { UserData } from '../../Types/UserData';
 import { TokenData } from '../../Types/TokenData';
+import { UserContext } from '../../contexts/UserContext';
 
 
 
@@ -13,20 +14,24 @@ export function Login() {
   const [emailInput, setEmailInput] = useState('');
   const [passwordInput, setPasswordInput] = useState('');
 
+  const { userData, setUserData } = useContext(UserContext);
+
   
   const handleSubmit = async() => {
     try{
       const requestResponse = await sendLoginRequest(emailInput, passwordInput)
-      const userData  :UserData  = requestResponse.user;
-      const tokenData :TokenData = requestResponse.tokens;
+      const fetchedUserData  :UserData  = requestResponse.user;
+      const fetchedTokenData :TokenData = requestResponse.tokens;
 
-      handleLoginSuccess(userData, tokenData);
+      handleLoginSuccess(fetchedUserData, fetchedTokenData);
     }catch (error) {
       handleLoginFailure();
     }
   }
 
-  function handleLoginSuccess(userData  :UserData, tokenData :TokenData){
+  function handleLoginSuccess(fetchedUserData  :UserData, fetchedTokenData :TokenData){
+    setUserData!(fetchedUserData)
+    localStorage.setItem('jwtToken', fetchedTokenData.access);
 
   }
 

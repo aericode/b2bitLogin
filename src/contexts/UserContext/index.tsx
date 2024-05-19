@@ -2,8 +2,8 @@ import { createContext, useState, ReactNode } from 'react';
 import { UserData } from '../../Types/UserData';
 
 interface UserContextProps {
-  userData?: UserData;
-  setUserData?: React.Dispatch<React.SetStateAction<UserData>>;
+  userData: UserData;
+  setUserData: React.Dispatch<React.SetStateAction<UserData>>;
 }
 
 type UserProviderType = {
