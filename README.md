@@ -1,5 +1,7 @@
 This Login Application is developed as a test for B2Bit.
 
+![ezgif-1-e80e326486](https://github.com/aericode/b2bitLogin/assets/38056291/aa2d26d5-5064-443b-b49d-c046ac4147cf)
+
 It is a simple React application designed to demonstrate the implementation of an user login interface. The app provides a basic login form where users can enter their credentials.
 
 It utilizes styled components as a way of separating CSS and Typescript, allowing for more modular and maintainable code by defining styles directly within the component files.
