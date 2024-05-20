@@ -7,9 +7,13 @@ import { UserData } from "../../Types/UserData";
 import { Container, ProfileHeaderText, ProfilePicture, ProfilePictureBlock, ProfilePictureWrapper, UserCard, Wrapper } from "./styles";
 import { Header } from "../../components/Header";
 import { Spinner } from "../../components/Spinner";
+import { useNavigate } from "react-router-dom";
 
 export function UserScreen() {
   const { userData, setUserData } = useContext(UserContext);
+  const navigate = useNavigate();
+
+
 
   useEffect(() => {
     const isLoggedIn = localStorage.getItem('isLoggedIn');
@@ -24,6 +28,10 @@ export function UserScreen() {
         console.log(error);
       }
     };
+
+    if (isLoggedIn !== 'true') {
+      navigate('/unauthorized');
+    }
 
 
     if (isLoggedIn === 'true' && !userData) {
