@@ -10,13 +10,17 @@ npm
 
 Installation
 Clone the repository to your local machine:
-git clone https://github.com/aericode/b2bitLogin
+`git clone https://github.com/aericode/b2bitLogin`
+
+Install the application dependencies
+```
 cd b2bitLogin
 npm install
+```
 
-Running the Application
+Run the Application
 To run the application in development mode, use the following command:
-npm run dev
+`npm run dev`
 
 the web application should be running at http://localhost:5173
 
