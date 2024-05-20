@@ -1,30 +1,24 @@
-# React + TypeScript + Vite
+Overview
+This Login Application is developed as a test for B2Bit. It is a simple React application designed to demonstrate the implementation of an user login interface. The app provides a basic login form where users can enter their credentials.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+It utilizes styled components as a way of separating CSS and Typescript, allowing for more modular and maintainable code by defining styles directly within the component files.
+It also uses styled component's theme context to provide visual elements as variables centralized in a theme file.
 
-Currently, two official plugins are available:
+Prerequisites
+Ensure you have the following software installed on your local development machine:
+Node.js (v16 or later)
+npm
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Installation
+Clone the repository to your local machine:
+git clone https://github.com/aericode/b2bitLogin
+cd b2bitLogin
+npm install
 
-## Expanding the ESLint configuration
+Running the Application
+To run the application in development mode, use the following command:
+npm run dev
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+the web application should be running at http://localhost:5173
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+This will start the development server, and the application will be accessible at http://localhost:5173 in your web browser.
