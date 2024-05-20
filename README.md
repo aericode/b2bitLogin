@@ -13,19 +13,18 @@ Node.js (v16 or later)
 npm
 
 Installation
+
 Clone the repository to your local machine:
 `git clone https://github.com/aericode/b2bitLogin`
 
 Install the application dependencies
+
 ```
 cd b2bitLogin
 npm install
 ```
 
-Run the Application
 To run the application in development mode, use the following command:
 `npm run dev`
-
-the web application should be running at http://localhost:5173
 
 This will start the development server, and the application will be accessible at http://localhost:5173 in your web browser.
