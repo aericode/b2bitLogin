@@ -9,6 +9,7 @@ import { TokenData } from '../../Types/TokenData';
 import { UserContext } from '../../contexts/UserContext';
 
 import { useNavigate } from 'react-router-dom';
+import toast, { Toaster } from 'react-hot-toast';
 
 export function Login() {
   const [emailInput, setEmailInput] = useState('');
@@ -17,6 +18,8 @@ export function Login() {
   const { setUserData } = useContext(UserContext);
 
   const navigate = useNavigate();
+
+  
   
   const handleSubmit = async() => {
     try{
@@ -39,13 +42,14 @@ export function Login() {
   }
 
   function handleLoginFailure(){
-
+    toast.error("Invalid credentials. Please try again.");
   }
 
 
   return (
     <Container>
       <LoginCard>
+        <Toaster />
         <Wrapper>
 
           <HeaderImage src={logo} />
