@@ -21,6 +21,7 @@ export function UserScreen() {
     const fetchData = async () => {
       try {
         const requestResponse = await sendTokenLoginRequest();
+
         const fetchedUserData: UserData = requestResponse;
         setUserData!(fetchedUserData);
 

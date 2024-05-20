@@ -39,8 +39,6 @@ export const sendTokenLoginRequest = async () => {
     const response = await api.get('auth/profile/') as UserData;
     return response;
   } catch (error) {
-    if (error instanceof Error) {
       throw error;
-    }
   }
 };
