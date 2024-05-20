@@ -6,7 +6,6 @@ import { sendTokenLoginRequest } from "../../utils/sendTokenLoginRequest";
 import { UserData } from "../../Types/UserData";
 import { Container, ProfileHeaderText, ProfilePicture, ProfilePictureBlock, ProfilePictureWrapper, UserCard, Wrapper } from "./styles";
 import { Header } from "../../components/Header";
-import { ClipLoader } from "react-spinners";
 import { Spinner } from "../../components/Spinner";
 
 export function UserScreen() {
